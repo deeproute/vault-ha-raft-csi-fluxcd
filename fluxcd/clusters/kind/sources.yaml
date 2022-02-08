@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  path: ./sources
+  path: ./fluxcd/sources
   prune: true
   sourceRef:
     kind: GitRepository
