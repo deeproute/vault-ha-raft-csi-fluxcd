@@ -33,7 +33,7 @@ function main()
     local -r cluster_config="configs/kind.config"
     local -r github_user="deeproute"
     local -r github_repo="vault-ha-raft-csi-fluxcd"
-    local -r github_path="../fluxcd/clusters/kind"
+    local -r github_path="./fluxcd/clusters/kind"
     local -r namespace_vault="vault-server"
 
     echo ""

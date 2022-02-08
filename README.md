@@ -13,11 +13,10 @@ This is a proof of concept where we use Hashicorp Vault CSI and mount it to a sa
 - vault (optional - only needed if you want to interact with Hashicorp Vault outside the cluster
 
 - Fork the [vault-ha-raft-csi-fluxcd](https://github.com/deeproute/vault-ha-raft-csi-fluxcd) repo to your github.
-- In `bin/bootstrap.sh` in [this line](https://github.com/deeproute/vault-ha-raft-csi-fluxcd/blob/main/bin/bootstrap.sh#L34), change to your github user.
+- In `bootstrap.sh` in [this line](https://github.com/deeproute/vault-ha-raft-csi-fluxcd/blob/main/bootstrap.sh#L34), change to your github user.
 
 ## Run this script and follow the instructions
 ```sh
-cd bin
 ./bootstrap.sh
 ```
 
