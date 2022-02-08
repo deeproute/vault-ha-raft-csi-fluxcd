@@ -1,0 +1,21 @@
+apiVersion: secrets-store.csi.x-k8s.io/v1alpha1
+kind: SecretProviderClass
+metadata:
+  name: vault-database
+spec:
+  provider: vault
+  parameters:
+    vaultAddress: "http://vault-server.vault-server:8200"
+    roleName: "database"
+    objects: |
+      - secretPath: "secret/data/db-pass"
+        objectName: "db-password"
+        secretKey: "password"
+  secretObjects:
+  - secretName: "db-password"
+    type: Opaque
+    labels:
+      env: "test"
+    data:
+    - objectName: "db-password"
+      key: "password"
