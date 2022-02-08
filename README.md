@@ -66,12 +66,23 @@ vault write auth/kubernetes/role/database \
 ```sh
 kubectl -n vault-server exec -it vault-server-0 -- /bin/sh
 
-Enable KV engine
-Put the secret
+vault secrets enable -path=secret kv-v2
+
+vault kv put secret/db-pass password="db-secret-password"
+
 ```
 
+## Create the Sample App
 ```sh
 kubectl create sa webapp-sa
 
 kubectl apply -f sampleapp/.
+```
+
+
+## Check if the secret is there
+
+```sh
+kubectl exec -it webapp -- env | grep DB_PASSWORD
+# DB_PASSWORD=db-secret-password
 ```
