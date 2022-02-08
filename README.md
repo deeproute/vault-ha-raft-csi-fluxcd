@@ -4,7 +4,7 @@
 
 This is a proof of concept where we use Hashicorp Vault CSI and mount it to a sample app.
 
-## Dependencies
+## Dependencies & Configurations
 
 - kubectl
 - kind - kind cluster CLI
@@ -12,9 +12,10 @@ This is a proof of concept where we use Hashicorp Vault CSI and mount it to a sa
 - gh - github CLI to authenticate with the GitHub repo
 - vault (optional - only needed if you want to interact with Hashicorp Vault outside the cluster
 
-- Fork the (vault-ha-raft-csi-fluxcd)[https://github.com/deeproute/vault-ha-raft-csi-fluxcd] repo to your github.
+- Fork the [vault-ha-raft-csi-fluxcd](https://github.com/deeproute/vault-ha-raft-csi-fluxcd) repo to your github.
+- In `bin/bootstrap.sh` in [this line](https://github.com/deeproute/vault-ha-raft-csi-fluxcd/blob/main/bin/bootstrap.sh#L34), change to your github user.
 
-## Run this script and follow the instructions:
+## Run this script and follow the instructions
 ```sh
 cd bin
 ./bootstrap.sh
