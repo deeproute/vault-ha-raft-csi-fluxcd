@@ -12,7 +12,7 @@ This is a proof of concept where we use Hashicorp Vault CSI and mount it to a sa
 - gh - github CLI to authenticate with the GitHub repo
 - vault (optional - only needed if you want to interact with Hashicorp Vault outside the cluster
 
-- Fork the (vault-ha-raft-csi-fluxcd)[https://github.com/deeproute/localdev] repo to your github.
+- Fork the (vault-ha-raft-csi-fluxcd)[https://github.com/deeproute/vault-ha-raft-csi-fluxcd] repo to your github.
 
 ## Run this script and follow the instructions:
 ```sh
